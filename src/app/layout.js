@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="sticky top-0 left-0 w-full flex justify-between gap-8 z-50">
-          <Navbar />
+          {/* <Navbar /> */}
         </div>
         
         {children}
