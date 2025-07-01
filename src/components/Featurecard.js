@@ -10,3 +10,13 @@
 //     </div>
 //   );
 // }
+// Reusable FeatureCard component
+export default function FeatureCard({ icon, title, description }) {
+  return (
+    <div className="bg-[#E5EAF3] p-6  shadow-sm flex flex-col gap-2 w-[416px] h-[157]">
+      <div className="text-2xl text-blue-900 w-[376px] h-[116px] top-[20px] gap-[12px]">{icon}</div>
+      <h3 className="text-2xl  text-gray-900">{title}</h3>
+      <p className="text-gray-700 ">{description}</p>
+    </div>
+  );
+}
