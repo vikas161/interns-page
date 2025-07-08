@@ -6,11 +6,13 @@ import TechnologiesSection from "@/components/TechnologiesSection";
 import HowWeThinkSection from "@/components/HowWeThinkWork";
 import HowWeHire from "@/components/HowWeHire";
 import InternSuccessGrid from "@/components/InternSuccessGrid";
-// import CollegeLogos from "@/components/CollegeLogos";
-// import InternshipSection from "@/components/InternshipSection";
-// import FaqSection from "@/components/FaqSection";
+import CollegeLogos from "@/components/CollegeLogos";
+import InternshipSection from "@/components/InternshipSection";
+import FaqSection from "@/components/FaqSection";
 import MainPage from "@/components/MainPage";
-import Image from "next/image";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import LaunchProjectSection from "@/components/NewProjectLaunch";
+import Footer from "@/components/Footer";
 
 export default function HeroSection() {
   return (
@@ -22,9 +24,12 @@ export default function HeroSection() {
     <HowWeThinkSection />
     <HowWeHire />
     <InternSuccessGrid />
-     {/* <CollegeLogos /> */}
-     {/* <InternshipSection /> */}
-           {/* <FaqSection /> */}
+     <CollegeLogos />
+     <InternshipSection />
+           <FaqSection />
+           <TestimonialsSection />
+           <LaunchProjectSection />
+           <Footer />
 
  </div>
 

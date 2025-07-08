@@ -1,123 +1,275 @@
-import {
-  Smartphone,
-  LayoutDashboard,
-  Brain,
-  Cloud,
-  PenTool,
-  CheckCircle,
-  Code,
-  Palette,
-  TrendingUp,
-  SatelliteDish,
-  Shield,
-  Database,
-  Link,
-} from "lucide-react";
+import Image from "next/image";
 
-const techData = [
-  {
-    icon: <Smartphone className="w-6 h-6 text-white" />,
-    title: "Mobile App Development",
-    tags: ["Android App Development", "Flutter App Development", "iOS App Development", "React Native App Development"],
-  },
-  {
-    icon: <LayoutDashboard className="w-6 h-6 text-white" />,
-    title: "Web App Development",
-    tags: ["Progressive Web App", "Frontend Development", "Backend Development", "Website Development"],
-  },
-  {
-    icon: <Brain className="w-6 h-6 text-white" />,
-    title: "AI/ML",
-    tags: ["Automation of Tasks", "Computer Vision", "Data-Driven Decisions", "NLP"],
-  },
-  {
-    icon: <Cloud className="w-6 h-6 text-white" />,
-    title: "Cloud Services",
-    tags: ["DevOps", "AWS", "Google Clouds", "Azure", "CI/CD Pipelines"],
-  },
-  {
-    icon: <PenTool className="w-6 h-6 text-white" />,
-    title: "UI/UX Design",
-    tags: ["User-Centered Design", "Seamless Navigation", "Visual & Interactive Design"],
-  },
-  {
-    icon: <CheckCircle className="w-6 h-6 text-white" />,
-    title: "Quality Assurance",
-    tags: ["Manual Testing", "API Testing", "Web Testing", "Mobile App Testing", "Automation Testing"],
-  },
-  {
-    icon: <Code className="w-6 h-6 text-white" />,
-    title: "API Development",
-    tags: ["RESTful & SOAP APIs", "Scalable", "Security & Authentication", "Testing"],
-  },
-  {
-    icon: <Palette className="w-6 h-6 text-white" />,
-    title: "Designing",
-    tags: ["UI/UX Design", "Mobile App", "Web Designs", "Wireframe/Prototyping", "Design Systems"],
-  },
-  {
-    icon: <TrendingUp className="w-6 h-6 text-white" />,
-    title: "Organic Reach",
-    tags: ["SEO", "GMB SEO", "Competitor Research", "Technical SEO", "ASO", "Performance Analytics"],
-  },
-  {
-    icon: <SatelliteDish className="w-6 h-6 text-white" />,
-    title: "IOT",
-    tags: [
-      "Device Connectivity",
-      "Automation & Remote Control",
-      "Interconnectivity",
-      "Applications in Various Fields",
-      "Real-Time Data Monitoring",
-      "Security & Privacy Challenges",
-    ],
-  },
-  {
-    icon: <Link className="w-6 h-6 text-white" />,
-    title: "Blockchain",
-    tags: ["Decentralized System", "Cryptocurrencies", "Secure and Immutable Records", "Smart Contracts"],
-  },
-  {
-    icon: <Shield className="w-6 h-6 text-white" />,
-    title: "Cybersecurity Solutions",
-    tags: ["Threat Prevention", "Risk Assessment & Management", "Data Protection", "Incident Response", "Encryption"],
-  },
-  {
-    icon: <Database className="w-6 h-6 text-white" />,
-    title: "Data & Analytics",
-    tags: ["Big Data Analytics", "Decision-Making", "Business Intelligence Analytics"],
-  },
-];
 
-export default function TechnologiesSection() {
+const cardStyles =
+  'bg-white p-4 shadow-md  flex flex-col gap-2  '
+const tagStyles =
+  'bg-[#E5EAF3] text-sm px-3 py-1 rounded-full text-gray-700 inline-block'
+
+const TechnologiesSection = () => {
   return (
-    
-    <div className=" py-16 px-6 md:px-12 bg-[#E5EAF3] w-[1536px] h-[1295px]">
-       
-      <h2 className="text-4xl  text-center mb-12">Our Technologies</h2>
-      
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 ">
-        {techData.map((tech, index) => (
-          <div key={index} className="  shadow-sm p-6 bg-white hover:shadow-md transition-all duration-300">
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="bg-blue-900 p-2 rounded-md">
-                {tech.icon}
-              </div>
-              <h3 className="text-lg font-medium">{tech.title}</h3>
-            </div>
+    <section className="bg-[#E5EAF3] py-12 px-4 md:px-30">
+      <h2 className="text-4xl  text-center mb-10">
+        Our Technologies
+      </h2>
+
+      <div className="space-y-6">
+        
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+              <Image
+                                            src="/mobile.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App Development
+            </h3>
             <div className="flex flex-wrap gap-2">
-              {tech.tags.map((tag, idx) => (
-                <span key={idx} className="bg-gray-100 text-sm px-3 py-1 rounded-full text-gray-700">
-                  {tag}
-                </span>
-              ))}
+              <span className={tagStyles}>Android App Development</span>
+              <span className={tagStyles}>Flutter App Development</span>
+              <span className={tagStyles}>IOS App Development</span>
+              <span className={tagStyles}>React Native App Development</span>
             </div>
           </div>
-          
-        ))}
+
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo1.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App Development
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>Progressive Web App</span>
+              <span className={tagStyles}>Frontend Development</span>
+              <span className={tagStyles}>Backend Development</span>
+              <span className={tagStyles}>Website Development</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Row 2 */}
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo2.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentAI/ML
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>Automation of Tasks</span>
+              <span className={tagStyles}>Computer Vision</span>
+              <span className={tagStyles}>Data-Driven Decisions</span>
+              <span className={tagStyles}>NLP</span>
+            </div>
+          </div>
+
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo3.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentCloud Services
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>DevOps</span>
+              <span className={tagStyles}>AWS</span>
+              <span className={tagStyles}>Google Cloud</span>
+              <span className={tagStyles}>Azure</span>
+              <span className={tagStyles}>CI/CD Pipelines</span>
+            </div>
+          </div>
+
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo4.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentUI/UX Design
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>User-Centered Design</span>
+              <span className={tagStyles}>Seamless Navigation</span>
+              <span className={tagStyles}>Visual & Interactive Design</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Row 3 */}
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo5.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentQuality Assurance
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>Manual Testing</span>
+              <span className={tagStyles}>API Testing</span>
+              <span className={tagStyles}>Web Testing</span>
+              <span className={tagStyles}>Mobile App Testing</span>
+              <span className={tagStyles}>Automation Testing</span>
+            </div>
+          </div>
+
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo6.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentAPI Development
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>RESTful & SOAP APIs</span>
+              <span className={tagStyles}>Scalable</span>
+              <span className={tagStyles}>Security & Authentication</span>
+              <span className={tagStyles}>Testing</span>
+            </div>
+          </div>
+
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+              <Image
+                                            src="/ourtechlogo7.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentDesigning
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>UI/UX Design</span>
+              <span className={tagStyles}>Mobile App</span>
+              <span className={tagStyles}>Web Designs</span>
+              <span className={tagStyles}>Wireframe/Prototyping</span>
+              <span className={tagStyles}>Design Systems</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Row 4 */}
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo8.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentOrganic Reach
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>SEO</span>
+              <span className={tagStyles}>GMB SEO</span>
+              <span className={tagStyles}>Competitor Research</span>
+              <span className={tagStyles}>Technical SEO</span>
+              <span className={tagStyles}>ASO</span>
+              <span className={tagStyles}>Performance Analytics</span>
+            </div>
+          </div>
+
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo9.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentIOT
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>Device Connectivity</span>
+              <span className={tagStyles}>Automation & Remote Control</span>
+              <span className={tagStyles}>Interconnectivity</span>
+              <span className={tagStyles}>Applications in Various Fields</span>
+              <span className={tagStyles}>Real-Time Data Monitoring</span>
+              <span className={tagStyles}>Security & Privacy Challenges</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo10.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentBlockchain
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>Decentralized System</span>
+              <span className={tagStyles}>Cryptocurrencies</span>
+              <span className={tagStyles}>Secure and Immutable Records</span>
+              <span className={tagStyles}>Smart Contracts</span>
+            </div>
+          </div>
+
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+               <Image
+                                            src="/ourtechlogo11.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentCybersecurity Solutions
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>Threat Prevention</span>
+              <span className={tagStyles}>Risk Assessment & Management</span>
+              <span className={tagStyles}>Data Protection</span>
+              <span className={tagStyles}>Incident Response</span>
+              <span className={tagStyles}>Encryption</span>
+            </div>
+          </div>
+
+          <div className={cardStyles}>
+            <h3 className=" text-lg flex items-center gap-4">
+              <Image
+                                            src="/ourtechlogo12.svg"
+                                            alt="Internship Girl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain"
+                                          /> Mobile App DevelopmentData & Analytics
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <span className={tagStyles}>Big Data Analytics</span>
+              <span className={tagStyles}>Decision-Making</span>
+              <span className={tagStyles}>Business Intelligence Analytics</span>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-      
-    
-  );
+    </section>
+  )
 }
+
+export default TechnologiesSection

@@ -43,8 +43,8 @@ const steps = [
 
 export default function HowWeHire() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-semibold text-center mb-10">How We Hire</h2>
+    <div className=" mx-auto px-4 py-12 w-[1440px] h-[681px] -mb-30">
+      <h2 className="text-4xl  text-center mb-10">How We Hire</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
         {steps.map((step, idx) => (
@@ -68,18 +68,18 @@ export default function HowWeHire() {
         ))}
       </div>
 
-      <div className="bg-blue-900 text-white p-6 rounded-md text-center">
-        <p className="text-sm mb-4 max-w-3xl mx-auto">
+      <div className="bg-[#002E83] text-white p-3 rounded-md text-center">
+        <p className="text-2xl  max-w-6xl mx-auto">
           Our career section enables you to apply for the job you desire. Submit your resume with a complete list of credentials and provide detailed information about your experience in the position.
         </p>
         
       </div>
       
-      <div className="flex justify-center mt-4">
-  <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-medium text-sm text-white">
+      <div className="flex justify-center mt-10">
+  <button className="px-6 py-2 bg-[#002E83] hover:bg-blue-700 rounded-md font-medium text-sm text-white">
     Explore job opportunities →
   </button>
 </div>
-    </section>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import {
   PlayIcon,
   Volume2,
@@ -34,9 +35,9 @@ export default function HowWeThinkSection() {
   return (
     <div className=" mx-auto  py-16 w-[1440px] h-[957px] gap-[32px] mb-20">
       <h2 className="text-3xl  text-center text-gray-800 mb-10">How We Think & Work</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-[32px] w-[1429px] h-[881px] ">
+      <div className="grid grid-cols-1 md:grid-cols-3  text-left  w-[1429px] h-[881px] ">
         {/* Left: Principles */}
-        <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-[16px] w-[868px] h-[881px]">
+        <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-[16px]  ">
           {principles.map((item, index) => (
            <div
   key={index}
@@ -59,8 +60,14 @@ export default function HowWeThinkSection() {
         </div>
 
         
-        <div className="bg-[#0E1D53] text-white  p-5 flex flex-col justify-between shadow-lg ">
-          
+        <div className="  p-5 flex   w-[529px] h-[881px] ">
+          <Image
+                      src="/video.svg"
+                      alt="Internship Girl"
+                      width={500}
+                      height={500}
+                      className="object-contain"
+                    />
           </div>
       </div>
     </div>
